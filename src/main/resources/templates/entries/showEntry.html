@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>ShowEntry</title>
+
+    <link rel="stylesheet" type="text/css" th:href="@{/css/custom.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}"/>
+    <script th:src="@{/js/jquery-3.3.1.min.js}"></script>
+    <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+</head>
+<body>
+
+<!--<table class="table showEntries">-->
+<!--<thead>-->
+<!--<tr>-->
+<!--<th>Title</th>-->
+<!--<th>Body</th>-->
+<!--</tr>-->
+<!--</thead>-->
+<!--<tbody>-->
+<!--<tr>-->
+<!--<td th:text="${entry.title}"></td>-->
+<!--<td th:text="${entry.body}"></td>-->
+<!--</tr>-->
+<!--</tbody>-->
+<!--</table>-->
+
+<div class="entry">
+    <h1 class="entry-title" th:utext="${entry.title}"></h1>
+    <div class="entry-body" th:utext="${entry.title}"></div>
+</div>
+
+</div>
+</body>
+</html>

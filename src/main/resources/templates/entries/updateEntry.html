@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}"/>
+    <script th:src="@{/js/jquery-3.3.1.min.js}"></script>
+    <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+    <meta charset="UTF-8"/>
+    <title>Add Post</title>
+</head>
+<body>
+<div class="form-style-8">
+    <h2>Add your New Blog Post</h2>
+
+    <form th:object="${entry}" method="post" th:action="@{'/blog/'+${entry.id}+'/update'}">
+        <input type="text" name="name" th:field ="*{title}" th:value="*{title}" placeholder="Full Name" />
+        <textarea type="text" name="body" th:field ="*{body}" th:value="*{body}" placeholder="Body" />
+        <input type="text" value="Writer"  th:field ="*{writer}" th:value="*{writer}" placeholder="Writter" />
+        <input type="submit" value="Submit" />
+    </form>
+</div>
+</body>
+<script type="text/javascript">
+    //auto expand textarea
+    function adjust_textarea(h) {
+        h.style.height = "20px";
+        h.style.height = (h.scrollHeight)+"px";
+    }
+</script>
+</html>

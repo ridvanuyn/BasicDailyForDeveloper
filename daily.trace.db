@@ -1,0 +1,51 @@
+2018-01-28 21:53:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "BODY VARCHAR(255) NOT NULL": "STRINGDECODE('We\u2019re able to see different colors because of our retina\u2019s innate ability to differentiate frequencies o... (2126)"; SQL statement:
+insert into entry (body, create_date, is_deleted, title, writer, id) values (?, ?, ?, ?, ?, ?) [22001-196]
+2018-01-28 21:54:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "BODY VARCHAR(255) NOT NULL": "STRINGDECODE('We\u2019re able to see different colors because of our retina\u2019s innate ability to differentiate frequencies o... (407)"; SQL statement:
+insert into entry (body, create_date, is_deleted, title, writer, id) values (?, ?, ?, ?, ?, ?) [22001-196]
+2018-01-28 21:54:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "BODY VARCHAR(255) NOT NULL": "STRINGDECODE('We\u2019re able to see different colors because of our retina\u2019s innate ability to differentiate frequencies o... (403)"; SQL statement:
+insert into entry (body, create_date, is_deleted, title, writer, id) values (?, ?, ?, ?, ?, ?) [22001-196]
+2018-01-29 10:16:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE LIKE[*] (LIKE_ID INTEGER NOT NULL, ENTRY_ID INTEGER, USER_NAME VARCHAR(255), PRIMARY KEY (LIKE_ID)) "; expected "identifier"; SQL statement:
+create table like (like_id integer not null, entry_id integer, user_name varchar(255), primary key (like_id)) [42001-196]
+2018-01-29 10:16:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "ALTER TABLE LIKE[*] ADD CONSTRAINT FKT4SP0PMBK3KEUVMI318Q24BE7 FOREIGN KEY (LIKE_ID) REFERENCES ENTRY "; expected "identifier"; SQL statement:
+alter table like add constraint FKt4sp0pmbk3keuvmi318q24be7 foreign key (like_id) references entry [42001-196]
+2018-01-29 10:18:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE LIKE[*] (LIKE_ID INTEGER NOT NULL, ENTRY_ID INTEGER, USER_NAME VARCHAR(255), PRIMARY KEY (LIKE_ID)) "; expected "identifier"; SQL statement:
+create table like (like_id integer not null, entry_id integer, user_name varchar(255), primary key (like_id)) [42001-196]
+2018-01-29 10:18:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "ALTER TABLE LIKE[*] ADD CONSTRAINT FKT4SP0PMBK3KEUVMI318Q24BE7 FOREIGN KEY (LIKE_ID) REFERENCES ENTRY "; expected "identifier"; SQL statement:
+alter table like add constraint FKt4sp0pmbk3keuvmi318q24be7 foreign key (like_id) references entry [42001-196]
+2018-01-29 10:27:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE LIKE[*] (LIKE_ID INTEGER NOT NULL, ENTRY_ID INTEGER, USER_NAME VARCHAR(255), PRIMARY KEY (LIKE_ID)) "; expected "identifier"; SQL statement:
+create table like (like_id integer not null, entry_id integer, user_name varchar(255), primary key (like_id)) [42001-196]
+2018-01-29 10:31:04 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "DROP TABLE LIKE[*] IF EXISTS "; expected "identifier"; SQL statement:
+drop table like if exists [42001-196]
+2018-01-29 10:31:04 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE LIKE[*] (LIKE_ID INTEGER NOT NULL, ENTRY_ID INTEGER, USER_NAME VARCHAR(255), PRIMARY KEY (LIKE_ID)) "; expected "identifier"; SQL statement:
+create table like (like_id integer not null, entry_id integer, user_name varchar(255), primary key (like_id)) [42001-196]
+2018-01-29 10:32:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "DROP TABLE LIKE[*] IF EXISTS "; expected "identifier"; SQL statement:
+drop table like if exists [42001-196]
+2018-01-29 10:32:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "DROP TABLE LIKE[*] IF EXISTS "; expected "identifier"; SQL statement:
+drop table like if exists [42001-196]
+2018-01-29 10:32:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE LIKE[*] (ID INTEGER NOT NULL, ENTRY_ID INTEGER, USER_NAME VARCHAR(255), PRIMARY KEY (ID)) "; expected "identifier"; SQL statement:
+create table like (id integer not null, entry_id integer, user_name varchar(255), primary key (id)) [42001-196]
+2018-01-29 10:33:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "DROP TABLE LIKE[*] IF EXISTS "; expected "identifier"; SQL statement:
+drop table like if exists [42001-196]
+2018-01-29 10:33:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "DROP TABLE LIKE[*] IF EXISTS "; expected "identifier"; SQL statement:
+drop table like if exists [42001-196]
+2018-01-29 10:33:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE LIKE[*] (ID INTEGER NOT NULL, ENTRY_ID INTEGER, USER_NAME VARCHAR(255), PRIMARY KEY (ID)) "; expected "identifier"; SQL statement:
+create table like (id integer not null, entry_id integer, user_name varchar(255), primary key (id)) [42001-196]
+2018-01-29 10:36:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "DROP TABLE LIKE[*] IF EXISTS "; expected "identifier"; SQL statement:
+drop table like if exists [42001-196]
