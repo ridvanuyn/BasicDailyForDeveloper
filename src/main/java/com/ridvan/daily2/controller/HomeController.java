@@ -7,14 +7,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.validation.Valid;
 import java.util.Optional;
 
 @Slf4j
-@Controller
+//@Controller
 @RequestMapping("/blog")
+
 public class HomeController {
 
     @Autowired
@@ -55,10 +59,10 @@ public class HomeController {
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public String showEntries(@PathVariable Integer id, Model model) {
-        Optional<Entry> entryOptional =  entryRepository.findById(id);
-            if(!entryOptional.isPresent()){
+        Optional<Entry> entryOptional = entryRepository.findById(id);
+        if (!entryOptional.isPresent()) {
             log.warn("enrty {} hatalı", id);
-            model.addAttribute("errorCase","Aradığınız "+id+" id numaralı yazı bulunamadı");
+            model.addAttribute("errorCase", "Aradığınız " + id + " id numaralı yazı bulunamadı");
             return "error";
         } else {
             model.addAttribute("entry", entryOptional.get());
@@ -66,12 +70,12 @@ public class HomeController {
         return "entries/showEntry";
     }
 
-    @RequestMapping(value = "/{id}/update" ,method = RequestMethod.GET)
-    public String updateEntry(@PathVariable("id")Integer id, Model model){
-        Optional<Entry> entryOptional =  entryRepository.findById(id);
-        if(!entryOptional.isPresent()){
+    @RequestMapping(value = "/{id}/update", method = RequestMethod.GET)
+    public String updateEntry(@PathVariable("id") Integer id, Model model) {
+        Optional<Entry> entryOptional = entryRepository.findById(id);
+        if (!entryOptional.isPresent()) {
             log.warn("enrty {} hatalı", id);
-            model.addAttribute("errorCase","Can not find a post id = "+id);
+            model.addAttribute("errorCase", "Can not find a post id = " + id);
             return "error";
         } else {
             model.addAttribute("entry", entryOptional.get());
@@ -93,10 +97,10 @@ public class HomeController {
     }
 
 
-    @RequestMapping(value = "/{id}/delete" ,method = RequestMethod.POST)
-    public String deleteEntry(@PathVariable("id")Integer id){
-        Optional<Entry> entryOptional =  entryRepository.findById(id);
-        if(!entryOptional.isPresent()){
+    @RequestMapping(value = "/{id}/delete", method = RequestMethod.POST)
+    public String deleteEntry(@PathVariable("id") Integer id) {
+        Optional<Entry> entryOptional = entryRepository.findById(id);
+        if (!entryOptional.isPresent()) {
             log.warn("enrty {} hatalı", id);
             return "error";
         } else {
