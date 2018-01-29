@@ -1,14 +1,16 @@
 package com.ridvan.daily2.controller;
 
+import com.ridvan.daily2.model.Entry;
 import com.ridvan.daily2.model.Likes;
 import com.ridvan.daily2.repository.LikesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/likes")
@@ -17,10 +19,19 @@ public class LikesController {
     @Autowired
     private LikesRepository likesRepository;
 
-    @GetMapping("")
+    @RequestMapping("")
     public ResponseEntity<List<Likes>> getAllLikes() {
-        List<Likes> likes = likesRepository.findAllLikes();
-        return ResponseEntity.ok(likes);
+
+        final Iterable<Likes> likes = likesRepository.findAll();
+        return ResponseEntity.ok((List<Likes>) likes);
+    }
+
+
+
+    @PostMapping("")
+    public ResponseEntity<Likes> createNewEntry( @RequestBody Likes likes) {
+        Likes savedLikes = likesRepository.save(likes);
+        return ResponseEntity.ok(savedLikes);
     }
 
 }

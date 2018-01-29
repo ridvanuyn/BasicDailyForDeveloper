@@ -9,6 +9,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 @Data
@@ -20,6 +21,7 @@ public class Entry {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "ENTRY_ID")
     private int id;
 
     @NotEmpty
@@ -43,6 +45,6 @@ public class Entry {
     private String isDeleted;
 
     @OneToMany(cascade = CascadeType.ALL,orphanRemoval = false)
-    @JoinColumn(name = "LIKE_ID")
-    private List<Likes> likeList;
+    @JoinColumn(name = "ENTRY_ID")
+    private List<Likes> likeList=new ArrayList<>();
 }

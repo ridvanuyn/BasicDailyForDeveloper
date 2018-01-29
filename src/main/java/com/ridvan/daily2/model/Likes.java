@@ -15,7 +15,7 @@ public class Likes {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id")
+    @Column(name = "LIKE_ID")
     private Integer id;
 
     @Column(name = "USER_NAME")
