@@ -16,7 +16,7 @@ import javax.validation.Valid;
 import java.util.Optional;
 
 @Slf4j
-//@Controller
+@Controller
 @RequestMapping("/blog")
 
 public class HomeController {
@@ -29,6 +29,11 @@ public class HomeController {
         Iterable<Entry> entries = entryRepository.findAll();
         model.addAttribute("entries", entries);
         return "entries/listEntries";
+    }
+
+    @RequestMapping(value = "/login")
+    public String loginPage(){
+        return"login";
     }
 
     @RequestMapping(value = "/new", method = RequestMethod.GET)
