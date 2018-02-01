@@ -1,3 +1,4 @@
+	lgpl-3.0
 <h1>Blog Project With Spring Boot </h1>
 
 Thymeleaf library added in MVC View
