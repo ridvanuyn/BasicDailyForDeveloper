@@ -1,9 +1,12 @@
 	lgpl-3.0
-<h1>Blog Project With Spring Boot </h1>
+<h1>Daily For Developers a Blog Project With Spring Boot </h1>
 
 Thymeleaf library added in MVC View
 Security for user and Auth
 Has likes about post. 
+
+Categories will coming soon. 
+Some Html and Css Changing...
 
 <h3>##Features##</h3>
 Will categories in it. 
