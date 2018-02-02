@@ -23,7 +23,7 @@ public class UserController {
     public ResponseEntity addUser(@RequestBody User user, BindingResult bindingResult) {
         if (!bindingResult.hasErrors()) {
             String password = user.getPassword();
-            user.setPassword("{noop}"+password);
+            user.setPassword(password);
             userService.saveUser(user);
             return ResponseEntity.ok(user);
         }
