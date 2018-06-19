@@ -1,5 +1,9 @@
+
+	
 	lgpl-3.0
 <h1>Daily For Developers a Blog Project With Spring Boot </h1>
+
+[![CircleCI](https://circleci.com/gh/ridvanuyn/BasicDailyForDeveloper.svg?style=svg)](https://circleci.com/gh/ridvanuyn/BasicDailyForDeveloper)
 
 Thymeleaf library added in MVC View
 Security for user and Auth
