@@ -5,6 +5,8 @@
 
 [![CircleCI](https://circleci.com/gh/ridvanuyn/BasicDailyForDeveloper.svg?style=svg)](https://circleci.com/gh/ridvanuyn/BasicDailyForDeveloper)
 
+[![codecov](https://codecov.io/gh/ridvanuyn/BasicDailyForDeveloper/branch/master/graph/badge.svg)](https://codecov.io/gh/ridvanuyn/BasicDailyForDeveloper)
+
 Thymeleaf library added in MVC View
 Security for user and Auth
 Has likes about post. 
